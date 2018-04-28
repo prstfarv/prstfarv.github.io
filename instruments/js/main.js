@@ -1,0 +1,1 @@
+function HideDialog(){var e=document.getElementById("dialog");e.style.cssText="visibility:hidden"}function SendJsonQuery(e,n){var t=new XMLHttpRequest;t.open("POST","http://localhost/json-handler"),t.setRequestHeader("Content-Type","application/json"),t.send(JSON.stringify({command:e,parameters:n}))}function Delete(){HideDialog(),SendJsonQuery("error","data")}

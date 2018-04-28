@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="app" ng-controller="MainCtrl">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>Веб-дизайн и верстка</title>
+	<meta property="og:url" content="http://prstfarv.github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Станислав Шамыкаев - Портфолио">
+    <meta property="og:description" content="Веб-дизайн и верстка">
+    <meta property="og:image" content="./img/main_romb.png">
+	<meta name="theme-color" content="#212326">
+    <link href="./img/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="./css/angular-material.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/dist/md-data-table.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/custom.css" rel="stylesheet">
+	
+    <script src="./js/jquery.min.js" type="text/javascript">
+    </script>
+    <script src="./js/angular.min.js">
+    </script>
+    <script src="./js/angular-animate.min.js">
+    </script>
+    <script src="./js/angular-aria.min.js">
+    </script>
+    <script src="./js/angular-messages.min.js">
+    </script>
+	<script src="./js/angular-route.min.js">
+    </script>
+    <script src="./js/angular-material.min.js">
+    </script>
+    <script src="./js/angular-material-icons.min.js">
+    </script>
+    <script src="./js/index.js" type="text/javascript">
+    </script>
+    <script src="./js/bootstrap.min.js">
+    </script>
+	<script src="./js/lightbox.js">
+	</script>
+	<script src="./js/main.js" type="text/javascript">
+    </script>
+</head>
+
+<body class="bg">
+	<div class="wrapper">
+		<div class="header">
+			<div class="content">
+				<div class="header-emblem-container">	
+						<div class="header-emblem-left asap bold">HEALTH</div><div class="header-emblem-dot pacifico green regular">.</div><div class="header-emblem-right pacifico green regular">life</div>	
+				</div>
+				<div class="header-buttons">
+					<div class="asap regular header-nav"><li><a href="">APPOINTMENT</a></li><li><a href="">FEATURE</a></li><li><a href="">DOCTOR</a></li><li><a href="">CONTACT US</a></li>
+						<div class="header-nav-social"><a href=""><span class="fa fa-facebook-square"></span></a><a href=""><span class="fa fa-twitter-square"></span></a><a href=""><span class="fa fa-google-plus-square"></span></a><a href=""><span class="fa fa-flickr"></span></a></div>
+					</div>
+				</div>
+			<div class="divider"></div>	
+			</div>
+		</div>
+		<div class="offer">	
+			<div class="content iphone">
+				<div class="offer-iphone-title museosans">
+				Цели квартала
+				</div>
+				<div class="offer-iphone-screen">
+					<img src="img/screen_1.jpg">
+					<img src="img/screen_2.jpg">
+					<img src="img/screen_3.jpg">
+				</div>
+				<div class="offer-iphone-dots">
+					<span onclick="slide(0)" class="fa fa-circle"></span><span onclick="slide(1)" class="fa fa-circle"></span><span onclick="slide(2)" class="fa fa-circle"></span>
+				</div>
+				<div class="offer-container">
+					<div class="offer-title museosans">
+					Внедряем стратегическое управление бизнесом розничных сетей <div class="green">за 2 месяца</div>
+					</div>
+					<div class="offer-description left offer-description-color museosans regular">
+					Полный контроль над крупным бизнесом через простые картинки из любой точки мира
+					</div>
+					<div class="offer-button left museosans bold">
+					ПОДКЛЮЧАЙТЕСЬ К НАМ!
+					</div>
+					<div class="offer-circle museosans bold">
+						<div class="offer-circle-text">Без лишней работы для сотрудников</div>
+					</div>
+					<div class="offer-clients-title left museosans offer-clients-color bold">
+					НАШИ КЛИЕНТЫ:
+					</div>
+					<div class="offer-clients">
+						<img src="img/1.png"><img src="img/2.png"><img src="img/3.png"><img src="img/4.png"><img src="img/5.png"><img src="img/6.png">
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div class="office">
+			<img src="img/office.jpg">
+		</div>
+		<div class="services">
+			<div class="services-spacer"></div>
+			<div class="content">
+				<div class="services-container services-bottom-spacer">
+					<div class="services-dates">
+						<div class="services-day museosans regular">
+						30
+						</div>
+						<div class="services-month museosans bold">
+						августа
+						</div>
+					</div>
+					<div class="services-cont">
+						<div class="services-title left museosans regular">
+						Сегодня <div class="green">тот самый день</div>, когда стоит отправить заявку на демонстрацию нашей системы
+						</div>
+						<div class="services-description left offer-description-color museosans regular">
+						Потому что Вы поймете ценность нашего подхода и уже через 2 месяца будете управлять Вашим бизнесом на основе KPI
+						</div>
+						<div class="services-contact">
+							<div class="services-contact-title museosans">
+							Запишитесь на презентацию прямо сейчас!
+							</div>
+							<div class="services-contact-container">
+								<form><input type="text" value="Как к Вам обращаться?" class="services-contact-input museosans regular">
+								<input type="text" value="Куда позвонить?" class="services-contact-input museosans regular"></form>
+								<div class="services-contact-button museosans regular">ДОГОВОРИТЬСЯ О ВСТРЕЧЕ</div>
+							</div>	
+						</div>	
+					</div>	
+				</div>
+			</div>	
+			<div class="content">
+				<div class="services-container services-bottom-spacer">
+					<div class="services-dates">
+					<div class="services-day museosans regular">
+					2
+					</div>
+					<div class="services-month museosans bold">
+					июля
+					</div>
+					</div>
+					<div class="services-cont">
+						<div class="services-title museosans regular">
+						Определим <div class="green">приоритетные цели</div> развития бизнеса (стратегию развития)
+						</div>
+						<div class="services-description offer-description-color museosans regular">
+						Вы получите визуальную карту достижения целей и стратегий компании
+						</div>
+					</div>
+				</div>		
+			</div>
+			<div class="content">
+				<div class="services-container services-bottom-spacer">
+				<div class="services-dates">
+					<div class="services-day museosans regular">
+					16
+					</div>
+					<div class="services-month museosans bold">
+					июля
+					</div>
+					</div>
+					<div class="services-cont">
+						<div class="services-title museosans regular">
+						Произведем <div class="green">декомпозицию целей</div> до ключевых показателей эффективности KPI
+						</div>
+						<div class="services-description offer-description-color museosans regular">
+						Вы получите:
+						</div>
+						<li>Список ответственных по KPI для каждой цели</li>
+						<li>Список KPI для каждой цели компании</li>
+					</div>	
+				</div>		
+			</div>
+			<div class="content">
+				<div class="services-container services-bottom-spacer">
+				<div class="services-dates">
+					<div class="services-day museosans regular">
+					1
+					</div>
+					<div class="services-month museosans bold">
+					августа
+					</div>
+					</div>
+					<div class="services-cont">
+						<div class="services-title museosans regular">
+						Будет готов поэтапный <div class="green">план достижения</div> целей Вашей компании
+						</div>
+						<div class="services-description offer-description-color museosans regular">
+						Вы получите:
+						</div>
+						<li>Список мероприятий для достижения целей</li>
+						<li>План-график по достижению Ваших целей</li>
+						<li>План по продажам для достижения целей</li>
+						<li>Что-то еще для достижения цели</li>
+					</div>
+				</div>		
+			</div>
+			<div class="content">
+				<div class="services-container services-bottom-spacer">
+				<div class="services-dates">
+					<div class="services-day museosans regular">
+					15
+					</div>
+					<div class="services-month museosans bold">
+					августа
+					</div>
+					</div>
+						<div class="services-cont">
+							<div class="services-title museosans regular">
+							День <div class="green">полного контроля</div> Вашей розничной сетью при помощи KPI
+							</div>
+							<div class="services-description offer-description-color museosans regular">
+							Вы получите:
+							</div>
+							<li>Инструмент оперативного принятия решений для взрывного роста бизнеса</li>
+							<li>Визуальный контроль выполнения целей</li>
+							<li>Снижение расходов</li>
+							<div class="services-description offer-description-color museosans regular">
+							И еще ряд приемуществ, которые мы Вам и покажем в Вашем офисе в момент презентации системы.
+							</div>
+							<div class="services-meet-button left museosans bold">
+							ВЫБРАТЬ ДЕНЬ ВСТРЕЧИ
+							</div>
+							<div class="services-little-text offer-description-color museosans regular">
+							Нам потребуется не более 27 минут Вашего времени
+							</div>
+						</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+</body>
+</html>

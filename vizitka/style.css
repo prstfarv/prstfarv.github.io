@@ -1,0 +1,415 @@
+   @font-face {
+    font-family: PT Sans; /* Имя шрифта */
+    src: url(font/pt_sans.ttf); /* Путь к файлу со шрифтом */
+   }
+   body
+    {
+    font-size: 21px;
+    font-family: 'PT Sans';
+    letter-spacing: -0.04em;
+    word-spacing: 0.17em;
+    line-height: 31px;
+    text-transform: uppercase;
+    padding: 0; 
+    margin: 0;
+    background-color:#000000;
+    color:#ffffff;
+    }
+    
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+        font-weight: bold;
+
+    }
+	
+	a,
+		a:hover,
+		a:focus{
+		color:orange;
+		text-decoration: none;
+		}
+    
+    .parallax {
+    /* The image used */
+    background-image: url("images/main_bg.jpg");
+
+    /* Set a specific height */
+    height:100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    
+    .parallax2 {
+    /* The image used */
+    background-image: url("images/main_bg2.jpg");
+
+    /* Set a specific height */
+    height:100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    
+    .parallax3 {
+    /* The image used */
+    background-image: url("images/main_bg7.jpg");
+
+    /* Set a specific height */
+    height:100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    
+    .parallax4 {
+    /* The image used */
+    background-image: url("images/main_bg4.jpg");
+
+    /* Set a specific height */
+    height:100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    
+    .parallax5 {
+    /* The image used */
+    background-image: url("images/main_bg5.jpg");
+
+    /* Set a specific height */
+    height:100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+	
+	.parallax6 {
+    /* The image used */
+    background-image: url("images/main_bg.jpg");
+
+    /* Set a specific height */
+    height:100%;
+	width:100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+	
+	.carousel-control
+	{
+	width:0%;
+	}
+    
+    .col-centered {
+    text-align: center;
+    margin: 0 auto;
+    }
+	
+	.carousel-inner > .item > img,
+	.carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+  .carousel-indicators>li{
+  padding:10px;
+  }
+	
+.parent {
+    display: table;
+    table-layout: fixed;
+}
+
+.child {
+    display:table-cell;
+    vertical-align:middle;
+}
+    
+    .Row
+    {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        border-spacing: 10px;
+    }
+    .Column
+    {
+        display: table-cell;
+        float:none;
+        text-align: center;
+    }
+    .icons-main
+    {
+    padding: 12px;
+    text-align: center;
+    width:100%;
+    }
+    .info
+    {
+    font-weight:bold;
+    font-size:80%;
+    }
+    .parallax_cell
+    {
+    display:inline-block;
+    text-align:center;
+    vertical-align:middle;
+    }
+	
+	 .parallax_text
+    {
+    height:40%;
+	width:100%;
+	text-align:center;
+	background-color:#000;
+    }
+    
+    .navbar-background
+    {
+    border:0px;
+    font-size:70%;
+    }
+    
+    /* цвет фона и рамки навигационного меню */
+        
+        .navbar-default {
+            border-radius: 0px;
+            border: 2px #ffffff;
+            background-color: #000;
+            -webkit-box-shadow: inset 0px 82px 66px -81px rgba(0,0,0,0.75);
+            -moz-box-shadow: inset 0px 82px 66px -81px rgba(0,0,0,0.75);
+            box-shadow: inset 0px 82px 66px -81px rgba(0,0,0,0.75);
+        }
+        /* цвет текста, содержащий название сайта или бренда */
+        
+        .navbar-default .navbar-brand {
+            color: #ffffff;
+        }
+        /* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе */
+        
+        .navbar-default .navbar-brand:hover,
+        .navbar-default .navbar-brand:focus {
+            color: #ffffff;
+        }
+        /* Цвет пунктов навигационного меню */
+        
+        .navbar-default .navbar-nav > li > a {
+            color: #777;
+            border-color: #ffffff;
+        }
+        /* Цвет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
+        
+        .navbar-default .navbar-nav > li > a:hover,
+        .navbar-default .navbar-nav > li > a:focus {
+            color: #ffffee;
+        }
+        /* Цвет и фон активного пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+        
+        .navbar-default .navbar-nav > .active > a,
+        .navbar-default .navbar-nav > .active > a:hover,
+        .navbar-default .navbar-nav > .active > a:focus {
+            color: #ffffee;
+            background-color: #e3670c;
+        }
+        /* Цвет и фон открытого пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+        
+        .navbar-default .navbar-nav > .open > a,
+        .navbar-default .navbar-nav > .open > a:hover,
+        .navbar-default .navbar-nav > .open > a:focus {
+            color: #ffffee;
+            background-color: #e3670c;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        }
+        
+        hr {
+        margin-top:0px;
+        opacity: 0.7;
+        }
+        
+        
+        /* Цвет стрелочки (треугольничка) у раскрывающихся пунктов меню */
+        
+        .navbar-default .navbar-nav > .dropdown > a .caret {
+            border-top-color: #777;
+            border-bottom-color: #777;
+        }
+        /* Цвет стрелочки (треугольничка) при поднесении к нему курсора мышки или при его нахождении в фокусе */
+        
+        .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+        .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+            border-top-color: #ffffee;
+            border-bottom-color: #ffffee;
+        }
+        /* Цвет стрелочки (треугольничка), открывшегося пункта меню */
+        
+        .navbar-default .navbar-nav > .open > a .caret,
+        .navbar-default .navbar-nav > .open > a:hover .caret,
+        .navbar-default .navbar-nav > .open > a:focus .caret {
+            border-top-color: #555;
+            border-bottom-color: #555;
+        }
+        /* CSS стили для мобильных устройств */
+        /* Цвет рамки у кнопки, которая открывает меню */
+        
+        .navbar-default .navbar-toggle {
+            border-color: #DDD;
+        }
+        /* Цвет фона кнопки (которая открывает меню) при поднесении к ней курсора мышки или при нахождении её в фокусе */
+        
+        .navbar-default .navbar-toggle:hover,
+        .navbar-default .navbar-toggle:focus {
+            background-color: #DDD;
+        }
+        /* Цвет полосочек в кнопочке, которая открывает меню */
+        
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #CCC;
+        }
+        @media (max-width: 767px) {
+            /* Цвет пунктов меню в раскрывающихся списках */
+            
+            .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                color: #777;
+            }
+            /* Цвет и фон пункта меню в раскрывающихся списках, при поднесении к нему курсора мышки или при нахождении его в фокусе */
+            
+            .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+            .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                color: #333;
+                background-color: transparent;
+            }
+        }
+        .navbar .nav > li > a {
+            line-height: 19px;
+            /*padding: 9px 10px 11px;*/
+            text-decoration: none;
+            /*-webkit-box-shadow: inset 2px 13px 5px -1px rgba(0, 0, 0, 0.09);
+            -moz-box-shadow: inset 2px 13px 5px -1px rgba(0, 0, 0, 0.09);
+            box-shadow: inset 2px 13px 5px -1px rgba(0, 0, 0, 0.09);*/
+            color: #ffffee;
+            font-weight: bold;
+        }
+        .navbar .nav > li > a:hover,
+        .navbar .nav > li > a:focus {
+            line-height: 19px;
+            /*padding: 9px 10px 11px;*/
+            text-decoration: none;
+            /*-webkit-box-shadow: inset 2px 13px 5px -1px rgba(0, 0, 0, 0.09);
+            -moz-box-shadow: inset 2px 13px 5px -1px rgba(0, 0, 0, 0.09);
+            box-shadow: inset 2px 13px 5px -1px rgba(0, 0, 0, 0.09);*/
+            color: #ffffee;
+            font-weight: bold;
+            background-color:#e3670c;
+            border: 2px #e3670c;
+        }
+        /*-- change navbar dropdown color --*/
+        
+        .navbar-default .navbar-nav .open .dropdown-menu>li>a,
+        .navbar-default .navbar-nav .open .dropdown-menu {
+            background-color: #e3670c;
+            line-height: 19px;
+            text-decoration: none;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            color: #ffffee;
+            font-weight: bold;
+        }
+        
+        .navbar-brand > li {
+        color: #ffffff;
+        }
+        
+        .navbar-brand > li > a:focus {
+        color: #ffffff;
+        }
+        
+        .navbar-brand > li > a:hover {
+        color: #ffffff; 
+        }
+    
+    
+    .pagination > li > a {
+    line-height: 19px;
+    padding: 9px 10px 11px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+    color:  #413b32;
+    font-weight:bold;
+    border-radius:0;
+    border-top:0px;
+    border-left:0px;
+    border-right:0px;
+    border-bottom: 2px solid #040403; 
+    }
+    
+    .pagination > li > a:focus,
+    .pagination > li > a:hover,
+    .pagination > li > span:focus,
+    .pagination > li > span:hover {
+    color: #ffffee;
+    background-color: #786b59;
+    border-color: #ffffee
+    border-top:0px;
+    border-left:0px;
+    border-right:0px;
+    border-bottom: 2px solid #ffffee; 
+    }
+    
+    .pagination>li:first-child>a,
+    .pagination>li:first-child>span{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top:0px;
+    border-left:0px;
+    border-right:0px;
+    border-bottom: 2px solid #040403; 
+    }
+
+    .pagination>li:last-child>a,
+    .pagination>li:last-child>span {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top:0px;
+    border-left:0px;
+    border-right:0px;
+    border-bottom: 2px solid #040403; 
+    }
+    
+    .pagination>li:last-child>a:focus,
+    .pagination>li:last-child>a:hover,
+    .pagination>li:last-child>span:focus, 
+    .pagination>li:last-child>span:hover
+    {
+    border-bottom: 2px solid #ffffee; 
+    }
+    
+    .pagination>li:first-child>a:focus,
+    .pagination>li:first-child>a:hover,
+    .pagination>li:first-child>span:focus, 
+    .pagination>li:first-child>span:hover
+    {
+    border-bottom: 2px solid #ffffee; 
+    }

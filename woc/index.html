@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=windows-1251' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of Cats</title>
+    <link rel='shortcut icon' href='./theme/default/favicon.ico' />
+    <meta property="og:url" content="worldofcats" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="World of Cats - Мир мохнатых" />
+    <meta property="og:description" content="Мир мохнатых" />
+    <meta property="og:image" content="images/logo.png" />
+    <link rel='stylesheet' href='utils/angular-material/angular-material.min.css'>
+    <link href='utils/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+    <link href='utils/bootstrap/dist/css/bootstrap.theme.min.css' rel='stylesheet' type='text/css' />
+    <link href='utils/bootstrap-social-gh-pages/bootstrap-social.css' rel='stylesheet' type='text/css' />
+    <link href="theme/default/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="theme/default/lightbox.min.css" rel="stylesheet">
+    <link href="style.min.css" rel="stylesheet" type="text/css">
+    <script type='text/javascript' src='./utils/jquery-2.1.4.js'></script>
+    <script src='./utils/angular/angular.min.js'></script>
+    <script src='./utils/angular-route/angular-route.min.js'></script>
+    <script src='./utils/angular-animate/angular-animate.min.js'></script>
+    <script src='./utils/angular-aria/angular-aria.min.js'></script>
+    <script src='./utils/angular-messages/angular-messages.min.js'></script>
+    <script src='./utils/angular-material/angular-material.min.js'></script>
+    <script src='./utils/angular-material-icons/angular-material-icons.min.js'></script>
+    <script src='./utils/angular-touch/angular-touch.min.js'></script>
+    <script src='./utils/angular-ui-router.min.js'></script>
+    <script type='text/javascript' src='./utils/angular-material-data-table/dist/md-data-table.min.js'></script>
+    <script src='./utils/bootstrap/dist/js/bootstrap.min.js'></script>
+    <script src="./utils/lightbox.js"></script>
+    <!--[if lt ie 7]>	
+			<link rel='stylesheet' type='text/css' media='screen' href='css/ie-win.css' />
+		<![endif]-->
+    <!--[if lt ie 8]>	
+			<link rel='stylesheet' type='text/css' media='screen' href='css/ie-win.css' />
+					<script type='text/javascript'> jQuery(document).ready(function($) { _V_.options.techOrder = ['flash', 'html5', 'links']; });</script>
+		<![endif]-->
+    <!--[if IE 9]> 
+			<script type='text/javascript'> jQuery(document).ready(function($) { _V_.options.techOrder = ['flash', 'html5', 'links']; });</script> 
+			<![endif]-->
+    <script src="./utils/custom.min.js"></script>
+    <script src="./utils/app.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="MainCtrl">
+    <div id="mouse_click" class="animation"> <img src="./images/animation.png" alt="My super animation" />
+    </div>
+    <div id="button_one" class="animation2 hidden-xs"> <img src="./images/animation2.png" alt="My super animation" />
+    </div>
+    <div id="button_two" class="animation2 hidden-xs"> <img src="./images/animation2.png" alt="My super animation" />
+    </div>
+
+    <nav id="mobile-menu" class="visible-xs">
+        <ul class="mobile-menu-item">
+            <li><a class="nav-buttons" href="index.html#!/main">МУР МУР?</a>
+            </li>
+            <li><a class="nav-buttons" href="index.html#!/pads">Мохнатые лапы</a>
+            </li>
+            <li>
+                <hr>
+            </li>
+            <li><a class="nav-links" href="">Ссылки</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid main-bg visible-xs">
+        <div class="row">
+            <div class="col-lg-12" style="min-height:0">
+                <div class="navbar-default navbar-fixed-top" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header" style="padding-left:20px;">
+                            <button id="mobile-btn" type="button" class="navbar-toggle pull-left">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid hidden-xs">
+        <div class="row">
+            <div class="col-lg-12 main-bg">
+                <div class="navigation">
+                    <nav class="navigation-menu">
+                        <a class="nav-buttons" href="index.html#!/main">МУР МУР?</a>
+                        <a class="nav-buttons" href="index.html#!/pads">МОХНАТЫЕ ЛАПЫ</a>
+                        <a class="nav-links" href="">ССЫЛКИ</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="logo-bg logo-place-parent">
+
+        <div class="logo-place-child">
+            <div class="container-fluid col-centered text-center">
+                <div class="row">
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="logo-img"><img src="images/woc_logo.png">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid col-centered text-center">
+                <div class="row">
+                    <div class="col-sm-3">
+                    </div>
+                    <div class="col-sm-3">
+                        <a class="nav-buttons" href="index.html#!/main">
+                            <div id="btn1" class="logo-btn">ИЗУЧИТЬ</div>
+                        </a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a class="nav-links" href="">
+                            <div id="btn2" class="logo-btn">ССЫЛКИ</div>
+                        </a>
+                    </div>
+                    <div class="col-sm-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid main-bg">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <div class="hidden-xs">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+            </div>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="item-place-parent">
+                        <div class="item-place-child">
+                            <img class="img-circle" src="images/cat_1.jpg"> мур мур мур
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-place-parent">
+                        <div class="item-place-child">
+                            <img class="img-circle" src="images/cat_2.jpg"> мяу!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-place-parent">
+                        <div class="item-place-child">
+                            <img class="img-circle" src="images/cat_3.jpg"> *ррр* *ррр* (урчит)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-place-parent">
+                        <div class="item-place-child">
+                            <img class="img-circle" src="images/cat_4.jpg"> ...?
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+        </div>
+    </div>
+
+    <div id="main-content" class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-area main-bg">
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-area main-bg">
+                <div class="col-sm-3">
+                </div>
+                <div class="col-sm-3">
+                    <a href=""></a>
+                </div>
+                <div class="col-sm-3">
+                    <a href=""></a>
+                </div>
+                <div class="col-sm-3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid footer text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <footer class="footer-links">
+                    <li><a href="https://prstfarv.github.io/">Автор</a>
+                    </li>
+                    <li><a href="https://prstfarv.github.io/verstka/">У Михалыча</a>
+                    </li>
+                    <li><a href="https://prstfarv.github.io/vizitka/">Визитка</a>
+                    </li>
+                    <li><a href="https://prstfarv.github.io/worldofcats">World of Cats</a>
+                    </li>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

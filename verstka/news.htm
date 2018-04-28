@@ -1,0 +1,100 @@
+﻿<div class="container-fluid">
+<div class="row">
+                <div class="col-sm-6 col-centered main-pad">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#news" role="tab">Новости</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#link" role="tab">Пишите письма</a>
+                        </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content" style="word-wrap: break-word;">
+                        <div class="tab-pane active" id="news" role="tabpanel">
+						<div class="news">
+                            <div class="news-title">Пополнение у Михалыча</div>
+							<div class="news-text">Встречайте нового сотрудника Михалыча - Митрича! Митрич много лет проработал на стройке и теперь готов пополнить наши не совсем стройные ряды.</div>
+							<div class="news-date">13.08.2078</div>
+						</div>	
+						<div class="news">
+                            <div class="news-title">Срочные новости</div>
+							<div class="news-text">Так получилось, что в данный момент Михалыч испытывает некоторые сложности с налоговой. Всем необходимо сдать по 500 рублей в кассу бабе Клаве.</div>
+							<div class="news-date">11.08.2078</div>
+						</div>	
+													<div class="container-fluid">
+			            <div class="row">
+                <div class="col-sm-6 col-centered text-center">
+                    <ul class="pagination ">
+                        <li><a href="">1</a>
+                        </li>
+                        <li><a href="">2</a>
+                        </li>
+                        <li><a href="">3</a>
+                        </li>
+                        <li><a href="">4</a>
+                        </li>
+                        <li><a href="">5</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+			</div>
+                        </div>
+                        <div class="tab-pane" id="messages" role="tabpanel">
+                            <table>
+                                <tbody md-body>
+                                    <tr ng-repeat="emp in site_text.text|orderBy:orderByField:reverseSort">
+                                        <td>{{emp.first}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane" id="link" role="tabpanel">
+						<div class="container-fluid">
+						<div class="row">
+                <div class="col-xs-10 col-centered">								
+										<div class="main-login main-center">
+											<form class="form-horizontal" method="post" action="#">	
+
+												<div class="form-group">												
+													<label for="name" class="cols-sm-2 control-label">Ваше Имя</label>
+													<div class="cols-xs-10">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+															<input type="text" class="form-control" name="name" id="name"  placeholder="Имя"/>
+														</div>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label for="email" class="cols-sm-2 control-label">Ваша почта</label>
+													<div class="cols-xs-10">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+															<input type="text" class="form-control" name="email" id="email"  placeholder="Email"/>
+														</div>
+													</div>
+												</div>
+												
+												<div class="form-group">
+												  <form>
+													  <label for="comment">Ваше сообщение</label>
+													  <textarea class="form-control" rows="5" id="comment"></textarea>
+												  </form>
+												</div>
+
+												<div class="form-group ">
+													<button type="button" class="btn btn-primary btn-lg btn-block login-button">Отправить!</button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+			</div>

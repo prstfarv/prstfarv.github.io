@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=windows-1251' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>У Михалыча</title>
+    <link rel='shortcut icon' href='./theme/default/favicon.ico' />	
+	<meta property="og:url"           content="verstka" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="У Михалыча - отделка и дизайн" />
+	<meta property="og:description"   content="У Михалыча - делаем на совесть, за спасибо" />
+	<meta property="og:image"         content="theme/default/images/logo_1.png" />
+    <link rel='stylesheet' href='theme/default/style.css' type='text/css' media='screen' />
+    <link rel='stylesheet' href='utils/angular-material/angular-material.min.css'>
+    <link href='utils/angular-material-data-table/dist/md-data-table.min.css' rel='stylesheet' type='text/css' />
+    <link href='utils/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+    <link href='utils/bootstrap/dist/css/bootstrap.theme.min.css' rel='stylesheet' type='text/css' />
+    <link href='utils/bootstrap-social-gh-pages/bootstrap-social.css' rel='stylesheet' type='text/css' />
+    <link href="theme/default/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="theme/default/lightbox.min.css" rel="stylesheet">
+	<link href="theme/default/sharrre/style.css" rel="stylesheet">
+	<link href="style.min.css" rel="stylesheet" type="text/css">
+    <script type='text/javascript' src='./utils/jquery-min.js'></script>
+    <script src='./utils/angular/angular.min.js'></script>
+	<script src='./utils/angular-route/angular-route.min.js'></script>
+    <script src='./utils/angular-animate/angular-animate.min.js'></script>
+    <script src='./utils/angular-aria/angular-aria.min.js'></script>
+    <script src='./utils/angular-messages/angular-messages.min.js'></script>
+    <script src='./utils/angular-material/angular-material.min.js'></script>
+    <script src='./utils/angular-material-icons/angular-material-icons.min.js'></script>
+    <script src='./utils/angular-touch/angular-touch.min.js'></script>
+    <script src='./utils/angular-ui-router.min.js'></script>
+    <script type='text/javascript' src='./utils/angular-material-data-table/dist/md-data-table.min.js'></script>
+    <script src='./utils/bootstrap/dist/js/bootstrap.min.js'></script>
+	<script src="./utils/lightbox.js"></script>
+    <!--[if lt ie 7]>	
+			<link rel='stylesheet' type='text/css' media='screen' href='css/ie-win.css' />
+		<![endif]-->
+    <!--[if lt ie 8]>	
+			<link rel='stylesheet' type='text/css' media='screen' href='css/ie-win.css' />
+					<script type='text/javascript'> jQuery(document).ready(function($) { _V_.options.techOrder = ['flash', 'html5', 'links']; });</script>
+		<![endif]-->
+    <!--[if IE 9]> 
+			<script type='text/javascript'> jQuery(document).ready(function($) { _V_.options.techOrder = ['flash', 'html5', 'links']; });</script> 
+			<![endif]-->
+    <script type='text/javascript'>	
+        var app = angular.module('app', ["ngMaterial", "ngMdIcons","ngRoute"]);
+			app.config(function($routeProvider) {
+		  $routeProvider
+		  .when('/news', {
+			templateUrl: 'news.htm'
+		  })
+		  .when('/catalog', {
+			templateUrl: 'catalog.htm'
+		  })
+		  .when('/about', {
+			templateUrl: 'about.htm'
+		  })
+		  .when('/links', {
+			templateUrl: 'links.htm'
+		  })
+		  .otherwise({
+			redirectTo: '/news'
+		  });
+		  });
+        app.controller('MainCtrl', function($scope, $http, $rootScope, test) {
+            $scope.credentials = {
+                username: '',
+                password: ''
+            };
+            $scope.login = function(credentials) {
+                AuthService.login(credentials).then(function() {
+                    $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
+                }, function() {
+                    $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
+                });
+            };
+            $scope.test = test.getstatus();
+            $scope.save = function() {}
+            //table data
+            $scope.data = {
+                employees: [{
+                    date: '13/08/2016',
+                    userName: 'Иванов В.Г',
+                    user_status: ''
+                }, {
+                    date: 'Сегодня',
+                    userName: 'Козлов С.Ю',
+                    user_status: ''
+                }, {
+                    date: 'Вчера',
+                    userName: 'Сидоров П.А',
+                    user_status: ''
+                }]
+            }
+            $scope.navbar_color = '#786b59';
+            $scope.panel_color = '#786b59';
+            $scope.footer_color = '#786b59';
+            //table items
+            $scope.orderByField = 'firstName';
+            $scope.reverseSort = false;
+            $scope.site_text = {
+                text: [{
+                    first: 'Example1'
+                }, {
+                    first: 'Example2'
+                }]
+            }
+        });
+        app.service('test', function() {
+                this.getstatus = function() {
+                    return 'fuckyeah';
+                }
+                this.myFunc = function(x) {
+                    return x.toString(16);
+                }
+            }
+        );
+    </script>
+	<!-- Скрипт для инициализации элементов на странице, имеющих атрибут data-toggle="tooltip" -->
+</head>
+
+<body ng-app="app" ng-controller="MainCtrl">
+    <div class="wrapper">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header" style="padding-left:15px;">
+                    <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse text-center">
+                    <div style="display: inline-block;">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#/">Главная</a>
+                            </li>
+                            <li><a href="index.html#!/catalog">Примеры отделки</a>
+                            </li>
+                            <li><a href="index.html#!/about">О Михалыче</a>
+                            </li>
+                            <li><a href="index.html#!/links">Контакты</a>
+                            </li>
+                            <li class="dropdown">
+                                <a id="drop1" class="dropdown-toggle" data-toggle="dropdown">
+                Поделиться
+                <span class="caret"></span>
+              </a>
+                                <ul class="dropdown-menu">
+											<li><a href="#" data-type="twitter" data-url="http://localhost/verstka" data-description="У Михалыча - дизайн интерьеров." data-via="У Михалыча" class="fa fa-twitter"> Twitter</a></li>
+											<li><a href="#" data-type="facebook" data-url="http://google.ru" data-title="TEST" data-description="TEST" data-media="http://localhost/verstka/theme/default/images/logo_1.png" class="fa fa-facebook"> Facebook</a></li>
+											<li><a href="#" data-type="googleplus" data-url="http://google.ru" data-description="Daaamn for Pinterest, Twitter, Facebook and Google Plus." data-media="http://localhost/verstka/theme/default/images/logo_1.png" class="fa fa-google-plus"> Google+</a></li>						
+											<li><a href="#" data-type="pinterest" data-url="http://localhost/verstka/" data-description="Custom share buttons for Pinterest, Twitter, Facebook and Google Plus." data-media="http://sonnyt.com/assets/imgs/prettySocial.png" class="fa fa-pinterest"> Pinterest</a></li>
+											<li><a href="#" data-type="linkedin" data-url="http://localhost/verstka/" data-title="TEST 4 prettySocial - custom social share buttons." data-description="TEST 5 Custom share buttons for Pinterest, Twitter, Facebook and Google Plus." data-via="sonnyt" data-media="http://sonnyt.com/assets/imgs/prettySocial.png" class="fa fa-linkedin"> LinkedIn</a></li>                            
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+		
+		        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 col-centered text-center" style="padding-top:50px;">
+                </div>
+            </div>
+		</div>
+		
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 col-centered text-center" style="padding-top:4%;">
+									<div class="logo"><img src="theme/default/images/logo_1.png"></div>
+									<div class="navbar-brand">Отделка интерьера</div>
+                </div>
+            </div>
+		</div>
+		
+<div class="container-fluid">
+<div class="row">
+                <div class="col-md-6 col-centered text-center">
+				<div class="container-fluid">
+					<div class="row">
+					<div class="col-md-12">
+					<div class="col-md-4" style="padding:2%;"><span class="fa fa-times navbar-brand" style="padding:20px;"></span><br> <div class="navbar-brand">Медленно</div> <br> Специфика нашей работы требует немало времени, но кого это волнует, не так ли?</div>
+					<div class="col-md-4" style="padding:2%;"><span class="fa fa-frown-o navbar-brand" style="padding:20px;"></span><br> <div class="navbar-brand"> Плохо </div> <br>  Выполняем все так плохо, что даже хорошо.</div>
+					<div class="col-md-4" style="padding:2%;"><span class="fa fa-money navbar-brand" style="padding:20px;"></span><br> <div class="navbar-brand"> Дорого </div> <br>  Выполняем все так плохо, что даже хорошо.</div>
+					</div>
+				</div>
+				</div>
+		</div></div></div>
+		
+			<div ng-view></div>
+
+        </div>
+    </div>
+                <div class="footer">
+				<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-6 col-centered">
+                    <a data-placement="top" title="Мы в Вконтакте" onmouseenter="$(this).tooltip('show')" class="navbar-brand" href="#" style="padding:15px 15px;"><span class="fa fa-vk"></span></a>
+                    <a data-placement="top" title="Мы в Твиттере" onmouseenter="$(this).tooltip('show')" class="navbar-brand" href="#" style="padding:15px 15px;"><span class="fa fa-twitter"></span></a>
+                    <a data-placement="top" title="Наш канал на YouTube" onmouseenter="$(this).tooltip('show')" class="navbar-brand" href="#" style="padding:15px 15px;"><span class="fa fa-youtube"></span></a>
+                    <a data-placement="top" title="Мы в Одноклассниках" onmouseenter="$(this).tooltip('show')" class="navbar-brand" href="#" style="padding:15px 15px;"><span class="fa fa-odnoklassniki-square"></span></a>
+					</div>
+				</div>
+				</div>
+				<div class="container-fluid">
+					<div class="row">
+					<div class="col-sm-6 col-centered">
+                    <div class="copyright">© copyright</div>
+					</div>
+				</div>
+				</div>
+</body>
+</html>

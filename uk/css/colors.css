@@ -1,0 +1,235 @@
+﻿/*цвета макета*/
+/*цвет заднего фона тела*/
+body,html{
+background-color:#fff;
+}
+/*цвет шрифта тела*/
+body,html{
+color:#000;
+}
+/*ссылки*/
+a:hover, a:link, a:active, a:visited{
+}
+/*цвет фона мобильного меню*/
+.dropdown-menu{
+background-color:#5b86b7;
+}
+/*цвет шрифта мобильного меню*/
+.dropdown-menu,.dropdown-menu>a{
+color:#fff;
+}
+/*цвет шрифта кнопки личного кабинета*/
+.private{
+color:#fff !important;
+}
+/*кнопки навигации header'а*/
+.nav-link{
+color:#06266F !important;
+}
+/*цвет оттенка заднего фона города*/
+.header-bg{
+background-color:#06266f;
+}
+/*задний фон навигации header'а*/
+.menu-bg{
+background-color:#fff;
+}
+/*цвет заднего фона кнопки личного кабинета*/
+.private{
+background-color:#4672d5;
+}
+/*цвет шрифта кнопки личного кабинета*/
+.private{
+color: white !important;
+}
+/*цвет шрифта личного кабинета*/
+.private{
+color: #fff !important;
+}
+/*цвет границы активной ссылки меню*/
+.active{
+border-bottom: 5px #4672d5 solid;
+}
+/*цвет элементов в панели пользователя*/
+.user-panel,.user-panel>a,.user-panel>a>i{
+color:#fff;
+}
+/*цвет заголовка*/
+.title{
+color:#fff;
+}
+/*цвет текста под заголовком*/
+.sub-title{
+color:#fff;
+}
+/*цвет линии заголовка*/
+.title>hr{
+background-color: #fff;
+}
+/*цвет шрифта и границ кнопок под заголовком*/
+.button{
+color: #fff;
+border: 2px #fff solid;
+}
+/*цвет ссылки шрифта кнопок под заголовком*/
+.button>a{
+color: #fff;
+}
+/*цвет левого сегмента обьявления*/
+.attention-container-left{
+background-color:#6c8cd5;
+}
+/*цвет обьявления*/
+.attention-text{
+color:red;
+}
+/*цвет надписи новости*/
+.big-title-container{
+color:#6C8CD5;
+}
+/*цвет полосок надписи новости*/
+.big-title-container>.inblock>hr{
+background-color:#6C8CD5;
+}
+/*цвет полоски под кнопкой "подробнее"*/
+.more>hr{
+background-color:#6C8CD5;
+}
+/*цвет заднего фона в панели сотрудников*/
+.card-sotrudniki-color{
+background-color:#fff;
+}
+/*цвет подчеркивания телефонов в панелях сотрудников*/
+.card-telephone-border{
+border-bottom:1px solid #fff;
+}
+/*цвет шрифта новости*/
+.card-cus-title{
+color:#fff;
+}
+/*цвет шрифта подписи лицензии*/
+.card-lic-title{
+color:#fff;
+}
+/*цвет плашки названия новости под картинкой*/
+.card-cus-title{
+background-color: #4672d5;
+}
+/*цвет плашки подписи лиензии*/
+.card-lic-title{
+background-color: #4672d5;
+}
+/*цвет лиензии при наведении*/
+.card-lic-shadow{
+background-color: #4672d5;
+}
+/*цвет иконки лупы при наведении на лиензию*/
+.card-lic-shadow>i{
+color: #fff;
+}
+/*цвет треугольничка под картинкой*/
+.card-cus-title>i{
+color: #4672d5;
+}
+/*цвет фона счетчика просмотров новости*/
+.card-counter{
+background-color: #6c8cd5;
+}
+/*цвет шрифта просмотров новости*/
+.card-counter{
+color: #fff;
+}
+/*цвет разделительной линии в выподающем меню*/
+.drop-line{
+background-color: #fff;
+}
+/*цвет шрифта ссылок новостей внизу*/
+.card-text>small>a{
+color:#90757d;
+}
+/*цвет шрифта в сотрудниках*/
+.peoples-col{
+color:#4672d5;
+}
+/*цвет шрифта цифр статистики и прочего*/
+.stats-blue,.stats-blue>a{
+color:#4672d5 !important;
+}
+/*цвет шрифта под основными цифрами*/
+.sub-stats{
+color:#6c8cd5;
+}
+/*цвет полоски под основными цифрами*/
+.block>hr{
+background-color:#4672d5;
+}
+/*цвет заднего фона сотрудников*/
+.peoples{
+background-color:#f1f1f1;
+}
+/*цвет оттенка карты*/
+.map:before{
+background-color: #2a447f;
+}
+/*цвет заднего фона панели контактов на карте*/
+.contacts-panel{
+background-color:#fff;
+}
+/*цвет шрифта панели контактов на карте*/
+.contacts-panel{
+color:#4672d5;
+}
+/*цвет заднего фона футера*/
+.footer{
+background-color:#4672d5;
+}
+/*цвет ссылок футера*/
+.footer-soc-icon{
+color: #fff;
+}
+/*цвет шрифтов надписей протоколов*/
+.protocol-icon,.protocol-icon>a{
+color: #fff;
+}
+/*цвет  шрифтов надписей протоколов*/
+.protocol-icon{
+background-color: #4873d0;
+}
+/*цвет иконки "скачать" на страние протоколов*/
+.protocol-icon-download{
+color: #4873d0;
+}
+/*цвет шрифта постраничной навигации*/
+.page-link{
+color: #4672d5 !important;
+}
+/*цвет шрифта разделов в факе*/
+.faq-main-panel-color{
+color:#fff;	
+}
+/*цвет шрифта вопросов в факе*/
+.faq-blue-color{
+color:#6c8cd5;	
+}
+/*цвет кнопки "следующие" в переключателе страниц*/
+.page-next{
+color:#6c8cd5 !important;	
+}
+/*цвет текущей страницы в переключателе страниц*/
+.page-active{
+color:#6c8cd5 !important;
+border: 1px solid #6c8cd5 !important	
+}
+/*цвет обводки в переключателе страниц*/
+.pager-width>ul>li>a{
+border:1px solid grey;
+}
+/*цвет нижнего подчеркивания кнопки 'показать еще'*/
+.more-button>a{
+border-bottom:1px solid #4672d5;
+}
+/*цвет шрифта кнопки 'показать еще'*/
+.more-button>a{
+color:#4672d5;
+}
+

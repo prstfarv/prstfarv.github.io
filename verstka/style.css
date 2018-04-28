@@ -1,0 +1,393 @@
+@font-face {
+    font-family: PT Sans; /* Имя шрифта */
+    src: url(theme/default/pt_sans.ttf); /* Путь к файлу со шрифтом */
+   }
+body {
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #ffffee;
+}
+a,
+a:hover,
+a:focus {
+    color: #ffffee;
+    text-decoration: none;
+}
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.01px;
+    font-size: 200%;
+}
+.navbar-inverse a {
+    color: #ccc !important;
+}
+.navbar-inverse a:hover {
+    background: #333 !important;
+}
+.navbar-nav a {
+    font-weight: 400;
+    font-size: 15px;
+}
+.navbar-custom {
+    background-color: #FFFFFF; //#F8F8F8;
+    border-color: #E7E7E7;
+}
+.footer {
+    min-height: 10%;
+    padding: 1%;
+    background-color: #786b59;
+    text-align: center;
+}
+.main-content {
+    background-color: #26211b;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.pagination-bg {
+    background-color: #786b59;
+}
+.main-pad img {
+    padding: 1%;
+    width: 100%;
+    height: 100%;
+}
+.wrapper {
+    background-image: url("theme/default/images/main_bg5.jpg");
+    /* Set a specific height */
+    
+    min-height: 90%;
+    /* Create the parallax scrolling effect */
+    
+    padding-bottom: 5%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-pad {
+    padding: 2%;
+    margin-top: 30px;
+    color: #ffffee;
+    background-color: #786b59;
+}
+.main-pad,
+a:link {
+    color: #ffffee;
+}
+.main-pad > .nav-tabs {
+    background-color: #786b59;
+}
+.main-pad > .tab-content {
+    background-color: #26211b;
+    color: #fff;
+    padding: 5px
+}
+.main-pad > .nav-tabs > li > a {
+    border: medium none;
+    border-radius: 0;
+}
+.main-pad > .nav-tabs > li > a:hover,
+.main-pad > .nav-tabs > li > a:focus {
+    background-color: #ffffee;
+    border: medium none;
+    border-radius: 0;
+    color: #786b59;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Параметры тени */
+}
+.col-centered {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+.navbar-brand {
+    float: none;
+    color: #f47053;
+}
+.navbar-brand,
+a:hover {
+    color: #ffe;
+}
+.navbar-nav {
+    margin-top: 5px;
+}
+.navbar-center {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+    height: 100%;
+}
+.icons-main {
+    padding: 12px;
+    text-align: center;
+    width: 100%;
+}
+.info {
+    font-weight: bold;
+    font-size: 50%;
+}
+.logo,
+img {
+    width: 100%;
+    height: 100%;
+}
+.copyright {
+    padding: 5px;
+    font-size: 80%;
+    background-color: #786b59;
+}
+.thumbnail {
+    background: #ffffee;
+    border: 0px;
+}
+.thumbnail_padding {
+    padding: 2%;
+}
+.navbar-default {
+    background-color: #000000;
+    border-radius: 0px;
+    border: 0px;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+    border: 2px #ffffee;
+    /* this was 1px earlier */
+}
+.btn-primary {
+    background: #786B59;
+    color: #ffffee;
+    border: 0px;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    background: #ffffee;
+    color: #26211B;
+}
+.btn-primary:active,
+.btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+}
+/* цвет текста, содержащий название сайта или бренда */
+
+.navbar-default .navbar-brand {
+    color: #777;
+}
+.news {
+    padding: 2%;
+}
+.news-title {
+    font-size: 120%;
+    font-weight: bold;
+    width: 100%;
+}
+.news-text {
+    color: #d1d1c1;
+    width: 100%;
+}
+.news-date {
+    font-size: 80%;
+    color: #707066;
+}
+/* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе */
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}
+/* Цвет пунктов навигационного меню */
+
+.navbar-default .navbar-nav > li > a {
+    color: #777;
+    border-color: #ffffff;
+}
+/* Цвет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #ffffee;
+    background-color: #786b59;
+}
+/* Цвет и фон активного пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #ffffee;
+    background-color: #786b59;
+}
+/* Цвет и фон открытого пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #ffffee;
+    background-color: #786b59;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+/* Цвет стрелочки (треугольничка) у раскрывающихся пунктов меню */
+
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #777;
+    border-bottom-color: #777;
+}
+/* Цвет стрелочки (треугольничка) при поднесении к нему курсора мышки или при его нахождении в фокусе */
+
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #ffffee;
+    border-bottom-color: #ffffee;
+}
+/* Цвет стрелочки (треугольничка), открывшегося пункта меню */
+
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+/* CSS стили для мобильных устройств */
+/* Цвет рамки у кнопки, которая открывает меню */
+
+.navbar-default .navbar-toggle {
+    border-color: #ffffee;
+    color: #786B59;
+}
+/* Цвет фона кнопки (которая открывает меню) при поднесении к ней курсора мышки или при нахождении её в фокусе */
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #ffffee;
+    color: #786B59;
+}
+/* Цвет полосочек в кнопочке, которая открывает меню */
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffee;
+    color: #786B59;
+}
+/*
+@media (max-width: 767px) {
+    
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+}
+@media all and (max-width: 1000px) {
+    body {
+        font-size: 100%;
+    }
+    .navbar-brand {
+        font-size: 180%;
+    }
+}
+@media all and (max-width: 360px) {
+    body {
+        font-size: 90%;
+    }
+    .navbar-brand {
+        font-size: 180%;
+    }
+}*/
+.navbar .nav > li > a {
+    line-height: 19px;
+    padding: 9px 10px 11px;
+    text-decoration: none;
+    -webkit-box-shadow: inset 2px 13px 5px -1px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: inset 2px 13px 5px -1px rgba(0, 0, 0, 0.09);
+    box-shadow: inset 2px 13px 5px -1px rgba(0, 0, 0, 0.09);
+    color: #ffffee;
+    font-weight: bold;
+}
+/*-- change navbar dropdown color --*/
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a,
+.navbar-default .navbar-nav .open .dropdown-menu {
+    background-color: #786b59;
+    line-height: 19px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    color: #ffffee;
+    font-weight: bold;
+}
+.pagination > li > a {
+    line-height: 19px;
+    padding: 9px 10px 11px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+    color: #413b32;
+    font-weight: bold;
+    border-radius: 0;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid #040403;
+    background-color: #ffffee;
+}
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+    color: #ffffee;
+    background-color: #786b59;
+    border-color: #FFFFEE border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid #ffffee;
+}
+.pagination>li:first-child>a,
+.pagination>li:first-child>span {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid #040403;
+}
+.pagination>li:last-child>a,
+.pagination>li:last-child>span {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid #040403;
+}
+.pagination>li:last-child>a:focus,
+.pagination>li:last-child>a:hover,
+.pagination>li:last-child>span:focus,
+.pagination>li:last-child>span:hover {
+    border-bottom: 2px solid #ffffee;
+}
+.pagination>li:first-child>a:focus,
+.pagination>li:first-child>a:hover,
+.pagination>li:first-child>span:focus,
+.pagination>li:first-child>span:hover {
+    border-bottom: 2px solid #ffffee;
+}
+.list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.list-group-item:last-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

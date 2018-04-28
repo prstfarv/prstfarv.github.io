@@ -1,0 +1,416 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Визитка</title>
+    <link href='./theme/default/favicon.ico' rel='shortcut icon'>
+    <link href='utils/angular-material/angular-material.min.css' rel='stylesheet'>
+    <link href='utils/angular-material-data-table/dist/md-data-table.min.css' rel='stylesheet' type='text/css'>
+    <link href='utils/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='utils/bootstrap/dist/css/bootstrap.theme.min.css' rel='stylesheet' type='text/css'>
+    <link href='utils/bootstrap-social-gh-pages/bootstrap-social.css' rel='stylesheet' type='text/css'>
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="style.min.css" rel="stylesheet">
+
+    <script src='./utils/jquery-min.js' type='text/javascript'>
+    </script>
+    <script src='./utils/angular/angular.min.js'>
+    </script>
+    <script src='./utils/angular-animate/angular-animate.min.js'>
+    </script>
+    <script src='./utils/angular-aria/angular-aria.min.js'>
+    </script>
+    <script src='./utils/angular-messages/angular-messages.min.js'>
+    </script>
+    <script src='./utils/angular-material/angular-material.min.js'>
+    </script>
+    <script src='./utils/angular-material-icons/angular-material-icons.min.js'>
+    </script>
+    <script src='./utils/angular-touch/angular-touch.min.js'>
+    </script>
+    <script src='./utils/angular-ui-router.min.js'>
+    </script>
+    <script src='./utils/angular-material-data-table/dist/md-data-table.min.js' type='text/javascript'>
+    </script>
+    <script src='./utils/bootstrap/dist/js/bootstrap.min.js'>
+    </script>
+    <script src='./utils/bootstrap-dropdown-hover-master/dist/jquery.bootstrap-dropdown-hover.min.js' type='text/javascript'>
+    </script>
+    <!--[if lt ie 7]>   
+            <link rel='stylesheet' type='text/css' media='screen' href='css/ie-win.css' />
+        <![endif]-->
+    <!--[if lt ie 8]>   
+            <link rel='stylesheet' type='text/css' media='screen' href='css/ie-win.css' />
+                    <script type='text/javascript'> jQuery(document).ready(function($) { _V_.options.techOrder = ['flash', 'html5', 'links']; });</script>
+        <![endif]-->
+    <!--[if IE 9]> 
+            <script type='text/javascript'> jQuery(document).ready(function($) { _V_.options.techOrder = ['flash', 'html5', 'links']; });</script> 
+            <![endif]-->
+    <script type='text/javascript'>
+        $(document).load(function() {
+        });
+        $(document).ready(function() {
+            var showed = [6];
+            for (var j = 0; j < 7; j++) {
+                showed[j] = false;
+            }
+            showed[1] = true;
+
+            $(window).scroll(function() {
+                $.fn.isOnScreen = function() {
+                    var win = $(window);
+                    var viewport = {
+                        top: win.scrollTop(),
+                        left: win.scrollLeft()
+                    };
+                    viewport.right = viewport.left + win.width();
+                    viewport.bottom = viewport.top + win.height();
+
+                    var bounds = this.offset();
+                    bounds.right = bounds.left + this.outerWidth();
+                    bounds.bottom = bounds.top + this.outerHeight();
+                    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+                };
+
+                for (var i = 1; i < 7; i++) {
+                    if ($("#slide_text" + i).isOnScreen()) {
+                        $("#btn" + i).focus();
+                        if (showed[i] == false) {
+                            showed[i] = true;
+                            console.log(this + "" + i);
+                            if (i == 2 || i == 4) {
+                                $("#slide_text" + i).hide().fadeIn(3000);
+                            } else if (i == 3) {
+                                $("#slide_text" + i).css({
+                                    visibility: "visible",
+                                    position: "relative",
+                                    left: "-=80",
+                                    opacity: "0"
+                                }).animate({
+                                    opacity: "1",
+                                    left: "0"
+                                }, 2000, function() {});
+                            } else {
+                                $("#slide_text" + i).css({
+                                    visibility: "visible",
+                                    position: "relative",
+                                    top: "-=120",
+                                    opacity: "0"
+                                }).animate({
+                                    opacity: "1",
+                                    top: "+=100"
+                                }, 2000, function() {});
+                            }
+                            //else { $("#slide_text"+i).css({visibility: "visible",position: "relative",left:"+=20",opacity:"0"}).animate({opacity:"1",left:"0"},2000,function(){}); }
+
+                        }
+                    }
+                }
+            });
+
+            $('a[href^="#"]').on('click', function(event) {
+
+                var target = $(this.getAttribute('href'));
+
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-background">
+        <div class="container-fluid">
+            <div class="navbar-header" style="padding-left:15px;">
+                <button class="navbar-toggle pull-left collapsed" data-target=".js-navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                </button> <a class="navbar-brand" href="#" style="padding:15px 15px;">Визитка</a>
+            </div>
+            <div class="collapse navbar-collapse js-navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#slide1" id="btn1">Слайд 1</a>
+                    </li>
+                    <li>
+                        <a href="#slide2" id="btn2">Слайд 2</a>
+                    </li>
+                    <li>
+                        <a href="#slide3" id="btn3">Слайд 3</a>
+                    </li>
+                    <li>
+                        <a href="#slide4" id="btn4">Слайд 4</a>
+                    </li>
+                    <li>
+                        <a href="#slide5" id="btn5">Слайд 5</a>
+                    </li>
+                    <li>
+                        <a href="#slide6" id="btn6">Слайд 6</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="drop1">Меню <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#slide1" id="btn1">Слайд 1</a>
+                            </li>
+                            <li>
+                                <a href="#slide2" id="btn2">Слайд 2</a>
+                            </li>
+                            <li>
+                                <a href="#slide3" id="btn3">Слайд 3</a>
+                            </li>
+                            <li>
+                                <a href="#slide4" id="btn4">Слайд 4</a>
+                            </li>
+                            <li>
+                                <a href="#slide5" id="btn5">Слайд 5</a>
+                            </li>
+                            <li>
+                                <a href="#slide6" id="btn6">Слайд 6</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="parent parallax" id="slide1">
+        <div class="child">
+            <div id="slide_text1">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-centered text-center">
+                            <div class="col-lg-4"><span class="fa fa-times" style="padding:20px;"></span>
+                                <br>
+                                <div class="">Медленно</div>
+                                <br> Специфика нашей работы требует немало времени, но кого это волнует, не так ли?</div>
+                            <div class="col-lg-4"><span class="fa fa-frown-o" style="padding:20px;"></span>
+                                <br>
+                                <div class=""> Плохо </div>
+                                <br> Выполняем все так плохо, что даже хорошо.</div>
+                            <div class="col-lg-4"><span class="fa fa-money" style="padding:20px;"></span>
+                                <br>
+                                <div class=""> Дорого </div>
+                                <br> Дорого? Да, дорого... Сорян чо</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax_text parent">
+        <div class="child">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-centered text-center">
+                        Слайды медленно появляются!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parent parallax2" id="slide2">
+        <div class="child">
+            <div id="slide_text2">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-centered text-center">
+                            <div class="col-lg-4"><span class="fa fa-times" style="padding:20px;"></span>
+                                <br>
+                                <div class="">Медленно</div>
+                                <br> Специфика нашей работы требует немало времени, но кого это волнует, не так ли?</div>
+                            <div class="col-lg-4"><span class="fa fa-frown-o" style="padding:20px;"></span>
+                                <br>
+                                <div class=""> Плохо </div>
+                                <br> Выполняем все так плохо, что даже хорошо.</div>
+                            <div class="col-lg-4"><span class="fa fa-money" style="padding:20px;"></span>
+                                <br>
+                                <div class=""> Дорого </div>
+                                <br> Дорого? Да, дорого... Сорян чо</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax_text parent">
+        <div class="child">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-centered text-center">
+                        Слайды двигаются слева направо!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parent parallax3" id="slide3">
+        <div class="child">
+            <div id="slide_text3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-centered text-center">
+                            <div class="col-lg-4"><span class="fa fa-times" style="padding:20px;"></span>
+                                <br>
+                                <div class="">Медленно</div>
+                                <br> Специфика нашей работы требует немало времени, но кого это волнует, не так ли?</div>
+                            <div class="col-lg-4"><span class="fa fa-frown-o" style="padding:20px;"></span>
+                                <br>
+                                <div class=""> Плохо </div>
+                                <br> Выполняем все так плохо, что даже хорошо.</div>
+                            <div class="col-lg-4"><span class="fa fa-money" style="padding:20px;"></span>
+                                <br>
+                                <div class=""> Дорого </div>
+                                <br> Дорого? Да, дорого... Сорян чо</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax_text parent">
+        <div class="child">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-centered text-center">
+                        Слайды очень медленно появляются!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parent parallax4" id="slide4">
+        <div class="child">
+            <div id="slide_text4">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-centered text-center">
+                            <div class="col-lg-4"><span class="fa fa-times" style="padding:20px;"></span>
+                                <br>
+                                <div class="">Медленно</div>
+                                <br> Специфика нашей работы требует немало времени, но кого это волнует, не так ли?</div>
+                            <div class="col-lg-4"><span class="fa fa-frown-o" style="padding:20px;"></span>
+                                <br>
+                                <div class=""> Плохо </div>
+                                <br> Выполняем все так плохо, что даже хорошо.</div>
+                            <div class="col-lg-4"><span class="fa fa-money" style="padding:20px;"></span>
+                                <br>
+                                <div class=""> Дорого </div>
+                                <br> Дорого? Да, дорого... Сорян чо</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax_text parent">
+        <div class="child">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-centered">
+                        Слайды спускаются сверху!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parent parallax5" id="slide5">
+        <div class="child">
+            <div id="slide_text5">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-centered text-center">
+                            <div class="col-lg-4"><span class="fa fa-times" style="padding:20px;"></span>
+                                <br>
+                                <div class="">Медленно</div>
+                                <br> Специфика нашей работы требует немало времени, но кого это волнует, не так ли?</div>
+                            <div class="col-lg-4"><span class="fa fa-frown-o" style="padding:20px;"></span>
+                                <br>
+                                <div class=""> Плохо </div>
+                                <br> Выполняем все так плохо, что даже хорошо.</div>
+                            <div class="col-lg-4"><span class="fa fa-money" style="padding:20px;"></span>
+                                <br>
+                                <div class=""> Дорого </div>
+                                <br> Дорого? Да, дорого... Сорян чо</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax_text parent">
+        <div class="child">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-centered text-center">
+                        Какой бэкграунд вам нравится больше?
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parent parallax6" id="slide6">
+        <div class="child">
+            <div id="slide_text6">
+                <div class="container-fluid">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="images/main_bg5.jpg" alt="Chania">
+                            </div>
+
+                            <div class="item">
+                                <img src="images/main_bg7.jpg" alt="Chania">
+                            </div>
+
+                            <div class="item">
+                                <img src="images/main_bg2.jpg" alt="Flower">
+                            </div>
+
+                            <div class="item">
+                                <img src="images/main_bg3.jpg" alt="Flower">
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	    <div class="parallax_text parent">
+        <div class="child">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-centered text-center">
+                        Спасибо за внимание! <a href="#">Хотите наверх?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
